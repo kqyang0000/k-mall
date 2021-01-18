@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <h2>Hello</h2>
+    <router-view></router-view>
+    <main-tab-bar/>
   </div>
-  <router-view/>
 </template>
 
 <script>
-	export default {
-		name: '#app'
-	}
+  import MainTabBar from 'components/content/MainTabBar.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      MainTabBar
+    }
+  }
 </script>
 
 <style>
-	@import "assets/css/base.css";
+  @import url("./assets/css/base.css");
 </style>
