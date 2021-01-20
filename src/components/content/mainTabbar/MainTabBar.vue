@@ -1,5 +1,5 @@
 <template>
-  <tab-bar>
+  <tab-bar class="main-tab-bar">
     <tab-bar-item path="/home" activeColor="#ff3b6f">
       <template v-slot:item-icon>
         <img src="~assets/img/tabbar/home.svg" />
@@ -64,4 +64,7 @@
 </script>
 
 <style>
+  .main-tab-bar {
+    z-index: 9;
+  }
 </style>
