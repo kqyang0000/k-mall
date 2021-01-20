@@ -11,13 +11,75 @@
     </nav-bar>
     <home-swiper :banners="banners"/>
     <recommend-view :recommends="recommends"/>
+    <feature-view/>
+    <tab-control :titles="['流行', '新款', '精选']" class="tab-control"/>
+
+    <ul>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+    </ul>
   </div>
 </template>
 
 <script>
-  import NavBar from 'components/common/navbar/NavBar.vue'
   import HomeSwiper from './childComps/HomeSwiper.vue'
   import RecommendView from './childComps/RecommendView.vue'
+  import FeatureView from './childComps/FeatureView.vue'
+
+  import NavBar from 'components/common/navbar/NavBar.vue'
+  import TabControl from 'components/content/tabControl/TabControl.vue'
 
   import {getHomeMultidata} from 'network/home.js'
 
@@ -30,9 +92,11 @@
       }
     },
     components: {
-      NavBar,
       HomeSwiper,
-      RecommendView
+      RecommendView,
+      FeatureView,
+      NavBar,
+      TabControl
     },
     created() {
       getHomeMultidata().then(res => {
@@ -44,8 +108,25 @@
 </script>
 
 <style>
+  #home {
+    padding-top: 44px;
+  }
+
   .home-nav {
     background-color: var(--color-tint);
     color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+  }
+
+  /*设置导航顶部黏贴
+    根据设置的属性，判断是用static还是fixd
+  */
+  .tab-control {
+    position: sticky;
+    top: 44px;
   }
 </style>
