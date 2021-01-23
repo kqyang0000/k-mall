@@ -30,3 +30,14 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 6.this在箭头函数中往上找作用域
 ### 7.当只有文字不同时没有必要使用插槽
 ### 8.当import组件时，养成保持顺序一致，按模块划分的习惯，对以后开发很有帮助
+### 9.在vue里面想明确拿到一个元素时，绑定ref属性，ref如果绑定在组件中，那么通过
+### this.$refs.refname获取到的是一个组件对象；ref如果绑定在普通元素中，那么通过
+### this.$refs.refname获取到的是一个元素对象
+### 10.组件是不能监听点击事件的，要想监听组件的点击事件，必须要使用原生的监听修饰符@click.native
+### scrollerHeight
+### 11.如何监听图片已经加载完成：
+### 原生监听：img.onload = function() {}
+### vue中：@load="loadImage"
+### 12.事件总线
+### this.$bus.$emit('aaa')
+### this.$bus.$on('aaa')
