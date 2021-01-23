@@ -79,7 +79,7 @@
 
       //监听item中组件加载完成
       this.$eventBus.on('itemImageLoad', () => {
-        this.$refs.scroll.refresh()
+        this.$refs.scroll && this.$refs.scroll.refresh()
       })
     },
     methods: {
@@ -95,7 +95,7 @@
           this.goods[type].list.push(...res.data.list)
           this.goods[type].page += 1
 
-          this.$refs.scroll.finishPullUp()
+          this.$refs.scroll && this.$refs.scroll.finishPullUp()
         })
       },
       tabClick(index) {
@@ -112,7 +112,7 @@
         }
       },
       backClick() {
-        this.$refs.scroll.scrollTo(0, 0)
+        this.$refs.scroll && this.$refs.scroll.scrollTo(0, 0)
       },
       contentScroll(position) {
         this.isShowBackTop = (-position.y) > 1000
