@@ -34,10 +34,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### this.$refs.refname获取到的是一个组件对象；ref如果绑定在普通元素中，那么通过
 ### this.$refs.refname获取到的是一个元素对象
 ### 10.组件是不能监听点击事件的，要想监听组件的点击事件，必须要使用原生的监听修饰符@click.native
-### scrollerHeight
-### 11.如何监听图片已经加载完成：
+### 11.scrollerHeight
+### 12.如何监听图片已经加载完成：
 ### 原生监听：img.onload = function() {}
 ### vue中：@load="loadImage"
-### 12.事件总线
-### this.$bus.$emit('aaa')
-### this.$bus.$on('aaa')
+### 13.事件总线
+### 14.防抖和截流
+### 15.局部变量被闭包引用的话不会被销毁
+### 16.
