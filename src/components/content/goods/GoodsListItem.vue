@@ -1,11 +1,13 @@
 <template>
   <div class="goods-item">
-    <img :src="goodsItem.show.img" alt="" @load="loadImage"/>
-    <div class="goods-info">
-      <p>{{goodsItem.title}}</p>
-      <span class="price">{{goodsItem.price}}</span>
-      <span class="collect">{{goodsItem.cfav}}</span>
-    </div>
+    <a :href="goodsItem.link">
+      <img :src="goodsItem.show.img" alt="" @load="loadImage"/>
+      <div class="goods-info">
+        <p>{{goodsItem.title}}</p>
+        <span class="price">{{goodsItem.price}}</span>
+        <span class="collect">{{goodsItem.cfav}}</span>
+      </div>
+    </a>
   </div>
 </template>
 

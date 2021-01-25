@@ -12,16 +12,24 @@
       </nav-bar>
     </div>
 
+    <tab-control :titles="['流行', '新款', '精选']"
+              @tabClick="tabClick"
+              ref="tabControl1"
+              class="tab-control"
+              v-show="isTabFixed"/>
+
     <scroll class="content"
                 ref="scroll"
                 :probe-type="3"
                 @scroll="contentScroll"
                 :pull-up-load="true"
                 @pullingUp="loadMore">
-      <home-swiper :banners="banners"/>
+      <home-swiper :banners="banners" @swiperImageLoad="swiperImageLoad"/>
       <recommend-view :recommends="recommends"/>
       <feature-view/>
-      <tab-control :titles="['流行', '新款', '精选']" class="tab-control" @tabClick="tabClick"/>
+      <tab-control :titles="['流行', '新款', '精选']"
+                @tabClick="tabClick"
+                ref="tabControl2"/>
       <goods-list :goods="showGoods"/>
     </scroll>
     <back-top @click.native="backClick" v-show="isShowBackTop"/>
@@ -40,6 +48,7 @@
   import Scroll from 'components/common/scroll/Scroll.vue'
 
   import {getHomeMultidata, getHomeGoods} from 'network/home.js'
+  import {debounce} from 'common/utils.js'
 
   export default {
     name: 'Home',
@@ -53,7 +62,9 @@
           'sell': {page: 0, list: []}
         },
         currentType: 'pop',
-        isShowBackTop: false
+        isShowBackTop: false,
+        tabOffsetTop: 0,
+        isTabFixed: false
       }
     },
     computed: {
@@ -78,7 +89,7 @@
       this.getHomeGoods('sell')
     },
     mounted() {
-      const refresh = this.debounce(this.$refs.scroll.refresh, 500)
+      const refresh = debounce(this.$refs.scroll.refresh, 500)
 
       //监听item中组件加载完成
       this.$eventBus.on('itemImageLoad', () => {
@@ -86,16 +97,6 @@
       })
     },
     methods: {
-      //防抖函数
-      debounce(func, delay) {
-        let timer = null
-        return function(...args) {
-          if(timer) clearTimeout(timer)
-          timer = setTimeout(() => {
-            func.apply(this, args)
-          }, delay)
-        }
-      },
       getHomeMultidata() {
         getHomeMultidata().then(res => {
           this.banners = res.data.banner.list
@@ -123,16 +124,25 @@
             this.currentType = 'sell'
             break
         }
+        this.$refs.tabControl1.currentIndex = index
+        this.$refs.tabControl2.currentIndex = index
       },
       backClick() {
         this.$refs.scroll && this.$refs.scroll.scrollTo(0, 0)
       },
       contentScroll(position) {
+        //置顶按钮显示
         this.isShowBackTop = (-position.y) > 1000
+
+        //判断tabControl是否吸顶(position: fixed)
+        this.isTabFixed = (-position.y) > this.tabOffsetTop
       },
       loadMore() {
         this.getHomeGoods(this.currentType)
       },
+      swiperImageLoad() {
+        this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop
+      }
     }
   }
 </script>
@@ -147,20 +157,13 @@
   .home-nav {
     background-color: var(--color-tint);
     color: #FFFFFF;
-    position: fixed;
+
+    /*当使用原生浏览器滚动时，防止导航不跟随一起滚动*/
+    /* position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    z-index: 9;
-  }
-
-  /*设置导航顶部黏贴
-    根据设置的属性，判断是用static还是fixd
-  */
-  .tab-control {
-    position: sticky;
-    top: 44px;
-    z-index: 9;
+    z-index: 9; */
   }
 
   .content {
@@ -170,5 +173,10 @@
     bottom: 49px;
     left: 0;
     right: 0;
+  }
+
+  .tab-control {
+    position: relative;
+    z-index: 9;
   }
 </style>
