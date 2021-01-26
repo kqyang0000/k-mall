@@ -99,15 +99,12 @@
     },
     //destroyed
     unmounted() {
-      console.log('home destroyed')
     },
     activated() {
       this.$refs.scroll.refresh()
-      console.log('activated: ' + this.saveY)
       this.$refs.scroll.scrollTo(0, this.saveY, 0)
     },
     deactivated() {
-      console.log('deactivated')
       this.saveY = this.$refs.scroll.getScrollY()
     },
     methods: {
