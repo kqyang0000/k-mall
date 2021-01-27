@@ -1559,6 +1559,71 @@ export function request(config) {
       }
     }
 
+    const detail_info = {
+      result: {
+        itemInfo: {
+          topImages: [
+            'http://s11.mogucdn.com/mlcdn/c45406/180126_37ifg8gib16j03llfbj0i75c7dgb6_640x961.jpg',
+            'http://s5.mogucdn.com/mlcdn/c45406/180827_1590j44g2bk619i6655ji20ihikfb_640x960.jpg',
+            'http://s11.mogucdn.com/mlcdn/c45406/180126_37ifg8gib16j03llfbj0i75c7dgb6_640x961.jpg',
+            'http://s5.mogucdn.com/mlcdn/c45406/180827_1590j44g2bk619i6655ji20ihikfb_640x960.jpg',
+            'http://s11.mogucdn.com/mlcdn/c45406/180126_37ifg8gib16j03llfbj0i75c7dgb6_640x961.jpg',
+            'http://s5.mogucdn.com/mlcdn/c45406/180827_1590j44g2bk619i6655ji20ihikfb_640x960.jpg'
+          ],
+          title: '【仲陌美】2018春秋季新款原宿风长袖T恤',
+          oldPrice: '¥69.00',
+          price: '¥38.50',
+          desc: '商品描述',
+          lowNowPrice: '38.50',
+          discountDesc: '活动价',
+          discountBgColor: '#f13e3a'
+        },
+        columns: [
+          '销量 1580',
+          '收藏33人',
+          '默认快递'
+        ],
+        shopInfo: {
+          shopLogo: 'http://s11.mogucdn.com/mlcdn/c45406/170714_0cg7e9a3ldij28dikejaef50ih38g_300x300.jpg',
+          name: '仲陌美',
+          score: [
+            {
+              isBetter: false,
+              name: '描述相符',
+              score: 4.64
+            },
+            {
+              isBetter: true,
+              name: '价格合理',
+              score: 5
+            },
+            {
+              isBetter: false,
+              name: '质量满意',
+              score: 4.62
+            }
+          ],
+          cSells: 57876,
+          cGoods: 99,
+          cFans: 2908,
+          services: [
+            {
+              icon: 'http://s11.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png',
+              name: '退货补运费'
+            },
+            {
+              icon: 'http://s11.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png',
+              name: '7天无理由退货'
+            },
+            {
+              icon: 'http://s11.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png',
+              name: '72小时发货'
+            }
+          ]
+        }
+      }
+    }
+
     if(config.params.type === 'pop') {
       return home_data1
     }
@@ -1567,6 +1632,10 @@ export function request(config) {
     }
     if(config.params.type === 'sell') {
       return home_data3
+    }
+    //详情
+    if(config.url === '/detail') {
+      return detail_info
     }
 
     return res.data
