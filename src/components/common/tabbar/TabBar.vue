@@ -7,7 +7,7 @@
 <script>
 </script>
 
-<style>
+<style scoped="scoped">
   /*flex布局*/
   #tab-bar {
     display: flex;

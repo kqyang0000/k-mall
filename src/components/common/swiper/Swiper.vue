@@ -209,7 +209,7 @@
 	}
 </script>
 
-<style scoped>
+<style scoped="scoped">
   #hy-swiper {
     overflow: hidden;
     position: relative;

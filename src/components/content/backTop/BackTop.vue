@@ -10,7 +10,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .back-top {
     position: fixed;
     right: 8px;

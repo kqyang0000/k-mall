@@ -35,7 +35,7 @@
   </div>
 </template>
 
-<script>
+<script scoped="scoped">
 	export default {
 		name: "DetailShopInfo",
     props: {

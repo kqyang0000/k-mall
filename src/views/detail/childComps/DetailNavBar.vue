@@ -43,7 +43,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .title {
     display: flex;
     font-size: 13px;

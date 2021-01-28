@@ -158,7 +158,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped="scoped">
   #home {
     /* padding-top: 44px; */
     height: 100vh;

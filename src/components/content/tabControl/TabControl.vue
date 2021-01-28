@@ -32,7 +32,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .tab-control {
     display: flex;
     text-align: center;

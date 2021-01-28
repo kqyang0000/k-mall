@@ -23,15 +23,15 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .goods {
     display: flex;
     /*根绝宽度决定一行显示多少个*/
     flex-wrap: wrap;
-    
+
     /*均等分*/
     justify-content: space-around;
-    
+
     padding: 2px;
   }
 </style>

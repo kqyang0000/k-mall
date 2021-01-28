@@ -32,7 +32,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .goods-item {
       padding-bottom: 40px;
       position: relative;

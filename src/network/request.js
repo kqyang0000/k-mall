@@ -1578,11 +1578,74 @@ export function request(config) {
           discountDesc: '活动价',
           discountBgColor: '#f13e3a'
         },
+        itemParams: {
+          info: {
+            anchor: 'product_info',
+            key: '产品参数',
+            set: [
+              {
+                key: '图案',
+                value: '复古/字母/文字'
+              },
+              {
+                key: '厂名',
+                value: '艾丽服装有限公司'
+              },
+              {
+                key: '颜色',
+                value: '黑白拼接'
+              },
+              {
+                key: '上衣厚度',
+                value: '适中'
+              },
+              {
+                key: '版型',
+                value: '宽松'
+              },
+              {
+                key: '季节',
+                value: '春秋'
+              }
+            ]
+          },
+          rule: {
+            anchor: 'size_info',
+            disclaimer: '以上尺码均为人工测量',
+            key: '尺码说明',
+            tables: [
+              ['尺码', 'M', 'L', 'XL', 'XXL'],
+              ['衣长', '61.5', '63', '64.5', '66'],
+              ['胸围', '98', '104', '110', '116'],
+              ['袖长', '63', '66', '68.5', '70.5']
+            ]
+          }
+        },
         columns: [
           '销量 1580',
           '收藏33人',
           '默认快递'
         ],
+        detailInfo: {
+          desc: '新款上市～',
+          detailImage: [
+            {
+              anchor: 'model_img',
+              desc: '',
+              key: '穿着效果',
+              list: [
+                'http://s5.mogucdn.com/mlcdn/c45406/180625_214d63al27cd81l7kk0l04513l3kg_800x800.jpg',
+                'http://s11.mogucdn.com/mlcdn/c45406/180625_78aiib63jjj1d1gii2b95b99d71f6_800x800.jpg',
+                'http://s5.mogucdn.com/mlcdn/c45406/180625_214d63al27cd81l7kk0l04513l3kg_800x800.jpg',
+                'http://s11.mogucdn.com/mlcdn/c45406/180625_78aiib63jjj1d1gii2b95b99d71f6_800x800.jpg',
+                'http://s5.mogucdn.com/mlcdn/c45406/180625_214d63al27cd81l7kk0l04513l3kg_800x800.jpg',
+                'http://s11.mogucdn.com/mlcdn/c45406/180625_78aiib63jjj1d1gii2b95b99d71f6_800x800.jpg',
+                'http://s5.mogucdn.com/mlcdn/c45406/180625_214d63al27cd81l7kk0l04513l3kg_800x800.jpg',
+                'http://s11.mogucdn.com/mlcdn/c45406/180625_78aiib63jjj1d1gii2b95b99d71f6_800x800.jpg'
+              ]
+            }
+          ]
+        },
         shopInfo: {
           shopLogo: 'http://s11.mogucdn.com/mlcdn/c45406/170714_0cg7e9a3ldij28dikejaef50ih38g_300x300.jpg',
           name: '仲陌美',

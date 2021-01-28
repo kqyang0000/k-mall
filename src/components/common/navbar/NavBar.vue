@@ -18,7 +18,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .nav-bar {
     display: flex;
     /*有内容后才有高度*/

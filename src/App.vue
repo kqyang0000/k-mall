@@ -20,6 +20,6 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   @import url("assets/css/base.css");
 </style>

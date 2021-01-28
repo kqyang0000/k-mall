@@ -63,6 +63,6 @@
   }
 </script>
 
-<style scoped>
+<style scoped="scoped">
 
 </style>

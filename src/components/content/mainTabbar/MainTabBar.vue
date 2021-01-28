@@ -63,7 +63,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .main-tab-bar {
     z-index: 9;
   }
