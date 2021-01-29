@@ -48,7 +48,7 @@
   import Scroll from 'components/common/scroll/Scroll.vue'
 
   import {getHomeMultidata, getHomeGoods} from 'network/home.js'
-  import {debounce} from 'common/utils.js'
+  import {itemListenerMixin} from 'common/mixin.js'
 
   export default {
     name: 'Home',
@@ -68,6 +68,7 @@
         saveY: 0
       }
     },
+    mixins: [itemListenerMixin],
     computed: {
       showGoods() {
         return this.goods[this.currentType].list
@@ -90,12 +91,6 @@
       this.getHomeGoods('sell')
     },
     mounted() {
-      const refresh = debounce(this.$refs.scroll.refresh, 500)
-
-      //监听item中组件加载完成
-      this.$eventBus.on('itemImageLoad', () => {
-        refresh()
-      })
     },
     //destroyed
     unmounted() {
@@ -106,6 +101,9 @@
     },
     deactivated() {
       this.saveY = this.$refs.scroll.getScrollY()
+
+      //取消全局事件监听
+      this.$eventBus.off('itemImageLoad', this.itemImgListener)
     },
     methods: {
       getHomeMultidata() {

@@ -1561,6 +1561,27 @@ export function request(config) {
 
     const detail_info = {
       result: {
+        rate: {
+          cRate: 125,
+          list: [
+            {
+              canExplain: false,
+              content: '刚好合适，物美价廉，衣服面料很好，穿着很舒适，版型也好看，非常棒',
+              created: 1535694719,
+              extraInfo: ['是否合身:合身'],
+              images: ['http://s11.mogucdn.com/mlcdn/c45406/180126_37ifg8gib16j03llfbj0i75c7dgb6_640x961.jpg'],
+              isAnonymous: 1,
+              isEmpty: 0,
+              level: '',
+              rateId: '11624z5q',
+              style: '颜色:上衣+裤子 尺码:M',
+              user: {
+                avatar: 'http://s3.mogucdn.com/p2/161214/103488673_8ff131b8g07810e345268cgcda6ef_140x141.png',
+                uname: '思凡'
+              }
+            }
+          ]
+        },
         itemInfo: {
           topImages: [
             'http://s11.mogucdn.com/mlcdn/c45406/180126_37ifg8gib16j03llfbj0i75c7dgb6_640x961.jpg',
@@ -1687,6 +1708,161 @@ export function request(config) {
       }
     }
 
+    const recommend_info = {
+      returnCode: 'SUCCESS',
+      success: true,
+      data: {
+        isEnd: false,
+        nexyPage: 1,
+        list: [
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          },
+          {
+            iid: '1pzayc',
+            acm: 'asdkjfbaksdjfijergfjaskdjfnaksdjfkasdjfkajsdfhkajsdfasdf',
+            cfav: 10880,
+            discount: 700,
+            discountPrice: 59.00,
+            image: 'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg',
+            isShelf: 0,
+            itemLikes: 10880,
+            itemSale: 661,
+            item_h5_url: 'http://m.meilishuo.com/wap/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            item_id: '1kkf1di',
+            item_url: 'http://m.meilishuo.com/detail/1kkf1di?acm=3.mce.2_4_1kkf1di.6011.0-41756.xSEtnr76nBiNW.sd_119_115-mid_6011-pos_0-lc_201',
+            price: 84.29,
+            shop_id: '1pzayc',
+            title: '2018春秋新款字母短款套头长袖t恤卫衣女显瘦破洞乞丐毛边直筒牛仔裤女长裤时尚套装两件套',
+            tradeItemId: 621808703
+          }
+        ]
+      }
+    }
+
     if(config.params.type === 'pop') {
       return home_data1
     }
@@ -1699,6 +1875,10 @@ export function request(config) {
     //详情
     if(config.url === '/detail') {
       return detail_info
+    }
+    //推荐
+    if(config.url === '/recommend') {
+      return recommend_info
     }
 
     return res.data
